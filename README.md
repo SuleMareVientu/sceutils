@@ -1,34 +1,3 @@
-Requirements
-============
-
-ubuntu 18.04 (or bash on windows ubuntu equivalent)
-
-python3
-
-p7zip-full (for exfat)
-gcc and make (to compile unazlr)
-
-
-python3:
-* pycryptodome
-
-
-
-
-usage
-=====
-
-pup_fiction.py
---------------
-### usage:
-* `./pup_fiction.py PUP_filename output_folder keys_file`
-
-
-### examples:
-* `./pup_fiction.py PSP2UPDATE.pup 368 keys_external.py`
-
----
-
 self2elf.py
 -----------
 ### usage:
@@ -42,11 +11,4 @@ self2elf.py
 
 ---
 
-axfs.py
--------
-### usage:
-* `./axfs.py [list|tar] [image_name] [output_name]`
-
-### examples:
-* `./axfs.py list fsimage.img`
-* `./axfs.py tar fsimage.img [fsimage.tar]`
+Build standalone exe with nuitka (`build-standalone-nuitka.bat`). Uses external keys (retail).

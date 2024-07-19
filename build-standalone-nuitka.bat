@@ -1,0 +1,1 @@
+cmd /k python -m nuitka --onefile --file-version=1.0.0.0 --product-version=1.0.0.0 --enable-plugin=anti-bloat --noinclude-default-mode=nofollow self2elf.py

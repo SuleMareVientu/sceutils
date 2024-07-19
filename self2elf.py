@@ -10,9 +10,6 @@ from scetypes import SecureBool, SceHeader, SelfHeader, AppInfoHeader, ElfHeader
 from Crypto.Cipher import AES
 from Crypto.Util import Counter
 
-from util import use_keys
-
-
 def self2elf(inf: IO[bytes], outf=open(os.devnull, "wb"), klictxt=b'\0'*16, silent=False, ignore_sysver=False):
     npdrmtype = 0
 
@@ -150,8 +147,6 @@ def main(args):
     parser.add_argument("-z", "--zrif", help="zrif string", type=str)
     parser.add_argument("-K", "--keys", help="keys filename", type=str, default="keys_external.py")
     args = parser.parse_args(args)
-    
-    use_keys(args.keys)
 
     if args.outputfile == "null":
         args.outputfile = os.devnull
